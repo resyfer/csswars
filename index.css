@@ -3,3 +3,135 @@
   border: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: magenta;
+}
+
+div.cont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 40vh;
+  width: 30vh;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+}
+
+div.head {
+  height: 12.5vh;
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+}
+
+div.head div.main {
+  position: relative;
+  height: 100%;
+  width: 65%;
+  margin: 0 auto;
+  border-radius: 50vh;
+  background-color: white;
+}
+
+div.main div.inner {
+  height: 60%;
+  width: 60%;
+  border-radius: 50vh;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.inner div.eye-cont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 20%;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.eye-cont div.eye {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-color: red;
+  border-radius: 50%;
+}
+
+div.antenna-cont {
+  height: 80%;
+  width: 60%;
+  left: 50%;
+  transform: translate(-50%, -110%);
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.head div.antenna {
+  height: 100%;
+  background-color: white;
+  width: 3px;
+  bottom: 0;
+}
+
+div#a1 {
+  transform: rotate(-30deg);
+  transform-origin: 50% 100%;
+  animation: movea 3s infinite ease-in-out;
+}
+
+@keyframes movea {
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+div#a2 {
+  transform: rotate(30deg);
+  transform-origin: 50% 100%;
+  animation: moveb 3s infinite ease-in-out;
+}
+
+@keyframes moveb {
+  50% {
+    transform: rotate(-5deg);
+  }
+}
+
+
+div.body {
+  width: 100%;
+  margin-top: auto;
+  height: calc(100% - 15.5vh);
+  display: flex;
+}
+
+div.body div.torso {
+  height: 80%;
+  margin: 0 2.5%;
+  aspect-ratio: 1/1;
+  background-color: white;
+  border-radius: 50%;
+}
+
+div.body div.arm {
+  height: 80%;
+  width: 20%;
+  background-color: white;
+}
+
+div#arm1 {
+  border-radius: 5vh 1vh 5vh 1vh;
+}
+
+div#arm2 {
+  border-radius: 1vh 5vh 1vh 5vh;
+}
